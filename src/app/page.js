@@ -4,6 +4,11 @@ import k from '@/true-agency-Q8otix2SVko-unsplash.jpg'
 import o from '@/maxresdefault.jpg'
 
 export default function Home() {
+  const params = new URLSearchParams({
+    t: 'Photo Pillows Layouts',
+    back: 'http://localhost:3000/',
+  });
+
   return (
     <div className="w-dvw h-dvh flex flex-col justify-center items-center gap-10">
       <div className="max-w-6xl flex justify-center items-center">
@@ -11,7 +16,7 @@ export default function Home() {
         <h1 className="text-9xl"><span className="underline decoration-2">moments</span> should last forever</h1>
       </div>
       <div>
-        <Link href='editor' className="block border px-4 py-2">k, whatever</Link>
+        <a href={`editor?${params.toString()}`} className="block border px-4 py-2">k, whatever</a>
         <Image className="w-30 opacity-25" src={o} alt="" />
       </div>
     </div>
